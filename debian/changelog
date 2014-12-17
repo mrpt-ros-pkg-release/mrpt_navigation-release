@@ -1,0 +1,23 @@
+ros-indigo-mrpt-map (0.1.1-0saucy) saucy; urgency=high
+
+  * First public binary release.
+
+ -- Markus Bader <markus.bader@tuwien.ac.at>  Tue, 16 Dec 2014 23:00:00 -0000
+
+ros-indigo-mrpt-map (0.1.0-0saucy) saucy; urgency=high
+
+  * consistent version numbers
+  * Fixes broken dependencies
+  * Update all wiki URLs
+  * Fix build with mrpt 1.2.x
+  * localization uses tf odom
+  * localization working like amcl
+  * mrpt_rawlog_play working
+  * ros mrpt convetion fnc renamed to convert
+  * rawlog player
+  * map publisher added but not yet working
+  * Contributors: Jose Luis Blanco, Jose-Luis Blanco-Claraco, Markus Bader
+
+ -- Markus Bader <markus.bader@tuwien.ac.at>  Tue, 16 Dec 2014 23:00:00 -0000
+
+
