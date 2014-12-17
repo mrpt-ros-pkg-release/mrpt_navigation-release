@@ -1,0 +1,18 @@
+ros-indigo-mrpt-bridge (0.1.1-0trusty) trusty; urgency=high
+
+  * First public binary release.
+
+ -- Jose-Luis Blanco-Claraco <jlblanco@ual.es>  Tue, 16 Dec 2014 23:00:00 -0000
+
+ros-indigo-mrpt-bridge (0.1.0-0trusty) trusty; urgency=high
+
+  * consistent version numbers
+  * Fixes broken dependencies
+  * Removed obsolete rawlog_play & fix build of other nodes.
+  * Fix build with mrpt 1.2.x
+  * localization uses tf odom
+  * localization working like amcl
+
+ -- Jose-Luis Blanco-Claraco <jlblanco@ual.es>  Tue, 16 Dec 2014 23:00:00 -0000
+
+
