@@ -2,6 +2,9 @@
 Changelog for package mrpt_rawlog
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+0.1.2 (2014-12-18)
+------------------
+
 0.1.1 (2014-12-17)
 ------------------
 * First public binary release.
