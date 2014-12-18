@@ -2,6 +2,10 @@
 Changelog for package mrpt_bridge
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+0.1.2 (2014-12-18)
+------------------
+* Fix missing build dependency (nav_msgs)
+
 0.1.1 (2014-12-17)
 ------------------
 * First public binary release.
