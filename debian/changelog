@@ -1,0 +1,30 @@
+ros-indigo-mrpt-bridge (0.1.3-0saucy) saucy; urgency=high
+
+
+
+ -- Jose-Luis Blanco-Claraco <jlblanco@ual.es>  Wed, 17 Dec 2014 23:00:00 -0000
+
+ros-indigo-mrpt-bridge (0.1.2-0saucy) saucy; urgency=high
+
+  * Fix missing build dependency (nav_msgs)
+
+ -- Jose-Luis Blanco-Claraco <jlblanco@ual.es>  Wed, 17 Dec 2014 23:00:00 -0000
+
+ros-indigo-mrpt-bridge (0.1.1-0saucy) saucy; urgency=high
+
+  * First public binary release.
+
+ -- Jose-Luis Blanco-Claraco <jlblanco@ual.es>  Tue, 16 Dec 2014 23:00:00 -0000
+
+ros-indigo-mrpt-bridge (0.1.0-0saucy) saucy; urgency=high
+
+  * consistent version numbers
+  * Fixes broken dependencies
+  * Removed obsolete rawlog_play & fix build of other nodes.
+  * Fix build with mrpt 1.2.x
+  * localization uses tf odom
+  * localization working like amcl
+
+ -- Jose-Luis Blanco-Claraco <jlblanco@ual.es>  Tue, 16 Dec 2014 23:00:00 -0000
+
+
