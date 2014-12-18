@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <package>
   <name>mrpt_bridge</name>
-  <version>0.1.1</version>
+  <version>0.1.2</version>
   <description>The mrpt_bridge package</description>
 
   <!-- One maintainer tag required, multiple allowed, one person per tag --> 
@@ -25,6 +25,7 @@
   <build_depend>geometry_msgs</build_depend>
   <build_depend>sensor_msgs</build_depend>
   <build_depend>mrpt_msgs</build_depend>
+  <build_depend>nav_msgs</build_depend>
   <build_depend>pcl_conversions</build_depend> <!-- Only during BUILD: for unit tests -->
   <build_depend>libpcl-all-dev</build_depend> <!-- Only during BUILD: for unit tests -->
 
@@ -42,6 +43,7 @@
   <run_depend>geometry_msgs</run_depend>
   <run_depend>sensor_msgs</run_depend>
   <run_depend>mrpt_msgs</run_depend>
+  <run_depend>nav_msgs</run_depend>
 
   <build_depend>mrpt</build_depend> <!-- Depend on mrpt system pkgs -->
   <run_depend>mrpt</run_depend> <!-- Depend on mrpt system pkgs -->
