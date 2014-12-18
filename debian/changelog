@@ -1,0 +1,21 @@
+ros-indigo-mrpt-tutorials (0.1.2-0trusty) trusty; urgency=high
+
+
+
+ -- Markus Bader <markus.bader@tuwien.ac.at>  Wed, 17 Dec 2014 23:00:00 -0000
+
+ros-indigo-mrpt-tutorials (0.1.1-0trusty) trusty; urgency=high
+
+  * First public binary release.
+
+ -- Markus Bader <markus.bader@tuwien.ac.at>  Tue, 16 Dec 2014 23:00:00 -0000
+
+ros-indigo-mrpt-tutorials (0.1.0-0trusty) trusty; urgency=high
+
+  * re-added run-time deps
+  * consistent version numbers
+  * config and demos tested
+
+ -- Markus Bader <markus.bader@tuwien.ac.at>  Tue, 16 Dec 2014 23:00:00 -0000
+
+
