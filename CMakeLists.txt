@@ -19,9 +19,9 @@ add_definitions(${PCL_DEFINITIONS})
 
 find_package(MRPT REQUIRED base obs maps slam)
 #include_directories(${MRPT_INCLUDE_DIRS})
-MESSAGE( STATUS "MRPT_INCLUDE_DIRS: " ${MRPT_INCLUDE_DIRS})
+#MESSAGE( STATUS "MRPT_INCLUDE_DIRS: " ${MRPT_INCLUDE_DIRS})
 #link_directories(${MRPT_LIBRARY_DIRS})
-MESSAGE( STATUS "MRPT_LIBRARY_DIRS: " ${MRPT_LIBS})
+#MESSAGE( STATUS "MRPT_LIBRARY_DIRS: " ${MRPT_LIBS})
 
 ## Uncomment this if the package has a setup.py. This macro ensures
 ## modules and global scripts declared therein get installed
@@ -92,7 +92,7 @@ catkin_package(
   INCLUDE_DIRS include
   LIBRARIES mrpt_bridge
 #  CATKIN_DEPENDS other_catkin_pkg
-  DEPENDS pcl mrpt  # opencv
+#  DEPENDS pcl mrpt  # opencv
 )
 
 ###########
