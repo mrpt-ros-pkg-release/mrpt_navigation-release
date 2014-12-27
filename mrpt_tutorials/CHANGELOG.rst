@@ -2,6 +2,9 @@
 Changelog for package mrpt_tutorials
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+0.1.4 (2014-12-27)
+------------------
+
 0.1.3 (2014-12-18)
 ------------------
 * Fix many missing install files
