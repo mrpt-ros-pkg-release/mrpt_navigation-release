@@ -2,6 +2,11 @@
 Changelog for package mrpt_tutorials
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+0.1.5 (2015-04-29)
+------------------
+* update on gazebo model for tutorial
+* Contributors: Markus Bader
+
 0.1.4 (2014-12-27)
 ------------------
 
