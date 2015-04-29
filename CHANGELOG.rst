@@ -2,6 +2,12 @@
 Changelog for package mrpt_rawlog
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+0.1.5 (2015-04-29)
+------------------
+* Cleaner build against mrpt 1.3.0
+* Fix build against mrpt 1.3.0
+* Contributors: Jose Luis Blanco
+
 0.1.4 (2014-12-27)
 ------------------
 * Removed 'mrpt' dep from catkin_package().
