@@ -1,0 +1,32 @@
+ros-indigo-mrpt-reactivenav2d (0.1.5-0saucy) saucy; urgency=high
+
+
+
+ -- Jose-Luis Blanco-Claraco <jlblanco@ual.es>  Tue, 28 Apr 2015 22:00:00 -0000
+
+ros-indigo-mrpt-reactivenav2d (0.1.4-0saucy) saucy; urgency=high
+
+  * First working version of the reactive navigator
+  * Contributors: Jose Luis Blanco
+
+ -- Jose-Luis Blanco-Claraco <jlblanco@ual.es>  Fri, 26 Dec 2014 23:00:00 -0000
+
+ros-indigo-mrpt-reactivenav2d (0.1.3-0saucy) saucy; urgency=high
+
+
+
+ -- Jose-Luis Blanco-Claraco <jlblanco@ual.es>  Thu, 18 Dec 2014 22:21:00 -0000
+
+ros-indigo-mrpt-reactivenav2d (0.1.2-0saucy) saucy; urgency=high
+
+
+
+ -- Jose-Luis Blanco-Claraco <jlblanco@ual.es>  Thu, 18 Dec 2014 10:49:00 -0000
+
+ros-indigo-mrpt-reactivenav2d (0.1.1-0saucy) saucy; urgency=high
+
+
+
+ -- Jose-Luis Blanco-Claraco <jlblanco@ual.es>  Tue, 16 Dec 2014 23:00:00 -0000
+
+
