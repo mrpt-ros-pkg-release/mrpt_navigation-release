@@ -1,0 +1,12 @@
+Source: ros-indigo-mrpt-local-obstacles
+Section: misc
+Priority: extra
+Maintainer: Jose-Luis Blanco-Claraco <jlblanco@ual.es>
+Build-Depends: debhelper (>= 9.0.0), ros-indigo-catkin, ros-indigo-dynamic-reconfigure, ros-indigo-mrpt-bridge, ros-indigo-roscpp, ros-indigo-sensor-msgs, ros-indigo-tf, ros-indigo-visualization-msgs
+Homepage: http://wiki.ros.org/mrpt_local_obstacles
+Standards-Version: 3.9.2
+
+Package: ros-indigo-mrpt-local-obstacles
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, ros-indigo-dynamic-reconfigure, ros-indigo-mrpt-bridge, ros-indigo-roscpp, ros-indigo-sensor-msgs, ros-indigo-tf, ros-indigo-visualization-msgs
+Description: A node that maintains a local obstacle map (point cloud, voxels or occupancy grid) from recent sensor readings within a configurable time window.
