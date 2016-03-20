@@ -1,3 +1,33 @@
+## mrpt_navigation (jade) - 0.1.6-0
+
+The packages in the `mrpt_navigation` repository were released into the `jade` distro by running `/usr/local/bin/bloom-release mrpt_navigation --track jade --rosdistro jade` on `Sun, 20 Mar 2016 11:19:01 -0000`
+
+These packages were released:
+- `mrpt_bridge`
+- `mrpt_local_obstacles`
+- `mrpt_localization`
+- `mrpt_map`
+- `mrpt_msgs`
+- `mrpt_navigation`
+- `mrpt_rawlog`
+- `mrpt_reactivenav2d`
+- `mrpt_tutorials`
+
+Version of package(s) in repository `mrpt_navigation`:
+- upstream repository: https://github.com/mrpt-ros-pkg/mrpt_navigation.git
+- release repository: https://github.com/mrpt-ros-pkg-release/mrpt_navigation-release.git
+- rosdistro version: `0.1.5-0`
+- old version: `0.1.5-0`
+- new version: `0.1.6-0`
+
+Versions of tools used:
+- bloom version: `0.5.20`
+- catkin_pkg version: `0.2.10`
+- rosdep version: `0.11.4`
+- rosdistro version: `0.4.4`
+- vcstools version: `0.1.36`
+
+
 ## mrpt_navigation (jade) - 0.1.5-0
 
 The packages in the `mrpt_navigation` repository were released into the `jade` distro by running `/usr/bin/bloom-release --rosdistro jade --track jade mrpt_navigation --edit` on `Wed, 29 Apr 2015 09:03:37 -0000`
