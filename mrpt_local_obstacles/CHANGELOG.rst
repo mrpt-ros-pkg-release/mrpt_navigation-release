@@ -2,6 +2,9 @@
 Changelog for package mrpt_local_obstacles
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+0.1.7 (2016-06-20)
+------------------
+
 0.1.6 (2016-03-20)
 ------------------
 * fix build with latest mrpt version
