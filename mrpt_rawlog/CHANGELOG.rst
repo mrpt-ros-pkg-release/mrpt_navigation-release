@@ -2,6 +2,14 @@
 Changelog for package mrpt_rawlog
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+0.1.8 (2016-06-29)
+------------------
+* Fix CMake dependencies (it failed to build in some platforms randomly)
+* Contributors: Jose-Luis Blanco-Claraco
+
+0.1.7 (2016-06-20)
+------------------
+
 0.1.6 (2016-03-20)
 ------------------
 * added a launch file that plays a range-only rawlog
