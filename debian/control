@@ -1,0 +1,12 @@
+Source: ros-kinetic-mrpt-msgs
+Section: misc
+Priority: extra
+Maintainer: Jose-Luis Blanco-Claraco <jlblanco@ual.es>
+Build-Depends: debhelper (>= 9.0.0), ros-kinetic-catkin, ros-kinetic-geometry-msgs, ros-kinetic-message-generation, ros-kinetic-std-msgs
+Homepage: http://wiki.ros.org/mrpt_msgs
+Standards-Version: 3.9.2
+
+Package: ros-kinetic-mrpt-msgs
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, ros-kinetic-geometry-msgs, ros-kinetic-message-runtime, ros-kinetic-std-msgs
+Description: mrpt_msgs
