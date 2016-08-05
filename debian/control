@@ -1,0 +1,12 @@
+Source: ros-jade-mrpt-local-obstacles
+Section: misc
+Priority: extra
+Maintainer: Jose-Luis Blanco-Claraco <jlblanco@ual.es>
+Build-Depends: debhelper (>= 9.0.0), ros-jade-catkin, ros-jade-dynamic-reconfigure, ros-jade-mrpt-bridge, ros-jade-roscpp, ros-jade-sensor-msgs, ros-jade-tf, ros-jade-visualization-msgs
+Homepage: http://wiki.ros.org/mrpt_local_obstacles
+Standards-Version: 3.9.2
+
+Package: ros-jade-mrpt-local-obstacles
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, ros-jade-dynamic-reconfigure, ros-jade-mrpt-bridge, ros-jade-roscpp, ros-jade-sensor-msgs, ros-jade-tf, ros-jade-visualization-msgs
+Description: A node that maintains a local obstacle map (point cloud, voxels or occupancy grid) from recent sensor readings within a configurable time window.
