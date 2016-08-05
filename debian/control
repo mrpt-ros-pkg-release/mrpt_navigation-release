@@ -1,0 +1,13 @@
+Source: ros-indigo-mrpt-rawlog
+Section: misc
+Priority: extra
+Maintainer: Markus Bader <markus.bader@tuwien.ac.at>
+Build-Depends: debhelper (>= 9.0.0), libmrpt-dev, ros-indigo-catkin, ros-indigo-dynamic-reconfigure, ros-indigo-mrpt-bridge, ros-indigo-nav-msgs, ros-indigo-roscpp, ros-indigo-rospy, ros-indigo-sensor-msgs, ros-indigo-std-msgs, ros-indigo-tf
+Homepage: http://wiki.ros.org/mrpt_rawlog
+Standards-Version: 3.9.2
+
+Package: ros-indigo-mrpt-rawlog
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, libmrpt-dev, ros-indigo-dynamic-reconfigure, ros-indigo-mrpt-bridge, ros-indigo-nav-msgs, ros-indigo-roscpp, ros-indigo-rospy, ros-indigo-sensor-msgs, ros-indigo-std-msgs, ros-indigo-tf
+Description: This package enables you to record a rawlog from a ROS drive robot.
+ At the moment the package is able to deal with odometry and 2d laser scans.
