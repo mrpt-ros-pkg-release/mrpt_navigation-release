@@ -1,0 +1,67 @@
+ros-indigo-mrpt-navigation (0.1.9-0trusty) trusty; urgency=high
+
+
+
+ -- Jose-Luis Blanco-Claraco <jlblanco@ual.es>  Thu, 04 Aug 2016 22:00:00 -0000
+
+ros-indigo-mrpt-navigation (0.1.8-0trusty) trusty; urgency=high
+
+
+
+ -- Jose-Luis Blanco-Claraco <jlblanco@ual.es>  Tue, 28 Jun 2016 22:00:00 -0000
+
+ros-indigo-mrpt-navigation (0.1.7-0trusty) trusty; urgency=high
+
+
+
+ -- Jose-Luis Blanco-Claraco <jlblanco@ual.es>  Sun, 19 Jun 2016 22:00:00 -0000
+
+ros-indigo-mrpt-navigation (0.1.6-0trusty) trusty; urgency=high
+
+  * New support for range-only (RO) localization
+  * fix build against mrpt <1.3.0
+
+ -- Jose-Luis Blanco-Claraco <jlblanco@ual.es>  Sat, 19 Mar 2016 23:00:00 -0000
+
+ros-indigo-mrpt-navigation (0.1.5-0trusty) trusty; urgency=high
+
+
+
+ -- Jose-Luis Blanco-Claraco <jlblanco@ual.es>  Tue, 28 Apr 2015 22:00:00 -0000
+
+ros-indigo-mrpt-navigation (0.1.4-0trusty) trusty; urgency=high
+
+  * Start new pkg mrpt_local_obstacles.
+    Fixes in package.xml's
+  * pose_cov_ops removed from mrpt_navigation metapkg
+  * Contributors: Jose Luis Blanco
+
+ -- Jose-Luis Blanco-Claraco <jlblanco@ual.es>  Fri, 26 Dec 2014 23:00:00 -0000
+
+ros-indigo-mrpt-navigation (0.1.3-0trusty) trusty; urgency=high
+
+
+
+ -- Jose-Luis Blanco-Claraco <jlblanco@ual.es>  Wed, 17 Dec 2014 23:00:00 -0000
+
+ros-indigo-mrpt-navigation (0.1.2-0trusty) trusty; urgency=high
+
+
+
+ -- Jose-Luis Blanco-Claraco <jlblanco@ual.es>  Wed, 17 Dec 2014 23:00:00 -0000
+
+ros-indigo-mrpt-navigation (0.1.1-0trusty) trusty; urgency=high
+
+  * First public binary release.
+
+ -- Jose-Luis Blanco-Claraco <jlblanco@ual.es>  Tue, 16 Dec 2014 23:00:00 -0000
+
+ros-indigo-mrpt-navigation (0.1.0-0trusty) trusty; urgency=high
+
+  * Fix metapackage xml (remove no longer existing pkg)
+  * Contributors: Jose Luis Blanco
+  * consistent version numbers
+
+ -- Jose-Luis Blanco-Claraco <jlblanco@ual.es>  Tue, 16 Dec 2014 23:00:00 -0000
+
+
