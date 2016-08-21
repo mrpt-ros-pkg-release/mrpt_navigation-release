@@ -2,6 +2,13 @@
 Changelog for package mrpt_bridge
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+0.1.11 (2016-08-21)
+-------------------
+* fix unit test error due to uninitialized tf::Pose
+* fix deprecated PCL header
+* Add landmark to bridge.
+* Contributors: Jose-Luis Blanco-Claraco, Logrus
+
 0.1.10 (2016-08-05)
 -------------------
 
