@@ -2,6 +2,11 @@
 Changelog for package mrpt_bridge
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+0.1.14 (2016-09-12)
+-------------------
+* fix build against mrpt < 1.5.0
+* Contributors: Jose-Luis Blanco-Claraco
+
 0.1.13 (2016-09-03)
 -------------------
 
