@@ -1,0 +1,12 @@
+Source: ros-kinetic-mrpt-bridge
+Section: misc
+Priority: extra
+Maintainer: Jose-Luis Blanco-Claraco <jlblanco@ual.es>
+Build-Depends: debhelper (>= 9.0.0), libgtest-dev, libmrpt-dev, libpcl-dev, ros-kinetic-catkin, ros-kinetic-geometry-msgs, ros-kinetic-message-generation, ros-kinetic-mrpt-msgs, ros-kinetic-nav-msgs, ros-kinetic-pcl-conversions, ros-kinetic-roscpp, ros-kinetic-rospy, ros-kinetic-sensor-msgs, ros-kinetic-std-msgs, ros-kinetic-tf
+Homepage: http://wiki.ros.org/mrpt_bridge
+Standards-Version: 3.9.2
+
+Package: ros-kinetic-mrpt-bridge
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, libmrpt-dev, ros-kinetic-geometry-msgs, ros-kinetic-message-runtime, ros-kinetic-mrpt-msgs, ros-kinetic-nav-msgs, ros-kinetic-roscpp, ros-kinetic-rospy, ros-kinetic-sensor-msgs, ros-kinetic-std-msgs, ros-kinetic-tf
+Description: The mrpt_bridge package
