@@ -2,6 +2,23 @@
 Changelog for package mrpt_reactivenav2d
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+0.1.16 (2016-12-13)
+-------------------
+* Fix `#52 <https://github.com/mrpt-ros-pkg/mrpt_navigation/issues/52>`_
+* Contributors: Jose-Luis Blanco-Claraco
+
+0.1.15 (2016-11-06)
+-------------------
+* Fix mrpt-reactivenav2d compilation errors
+* Fix compilation for MRPT < 1.5.0
+* Add include guard  for MRPT >= 1.5.0, fill timestamp entries
+* Add include guard for CVehicleVelCmd_DiffDriven in mrpt >= 1.5.0
+* Fix mrpt-reactivenav2d compilation errors
+* Contributors: Nikos Koukis, bergercookie
+
+0.1.14 (2016-09-12)
+-------------------
+
 0.1.13 (2016-09-03)
 -------------------
 
