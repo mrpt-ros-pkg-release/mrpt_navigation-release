@@ -2,6 +2,19 @@
 Changelog for package mrpt_msgs
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+0.1.16 (2016-12-13)
+-------------------
+* Remove unecessary Pose2DStamped msg
+* Contributors: Nikos Koukis
+
+0.1.15 (2016-11-06)
+-------------------
+* Add Pose2DStamped ROS message
+* Contributors: Nikos Koukis
+
+0.1.14 (2016-09-12)
+-------------------
+
 0.1.13 (2016-09-03)
 -------------------
 
