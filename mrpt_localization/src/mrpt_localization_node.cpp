@@ -28,6 +28,7 @@
 
 #include <boost/interprocess/sync/scoped_lock.hpp>
 #include <geometry_msgs/PoseArray.h>
+#include <pose_cov_ops/pose_cov_ops.h>
 
 #include <mrpt_bridge/pose.h>
 #include <mrpt_bridge/laser_scan.h>
@@ -39,6 +40,9 @@
 #if MRPT_VERSION>=0x130
   #include <mrpt/obs/CObservationBeaconRanges.h>
   using namespace mrpt::obs;
+  #if MRPT_VERSION>=0x150
+    #include <mrpt/obs/CObservationRobotPose.h>
+  #endif
 #else
   #include <mrpt/slam/CObservationBeaconRanges.h>
   using namespace mrpt::slam;
@@ -94,9 +98,13 @@ void PFLocalizationNode::init()
     {
       subSensors_[i] = n_.subscribe(lstSources[i], 1, &PFLocalizationNode::callbackLaser, this);
     }
-    else
+    else if (lstSources[i].find("beacon") != std::string::npos)
     {
       subSensors_[i] = n_.subscribe(lstSources[i], 1, &PFLocalizationNode::callbackBeacon, this);
+    }
+    else
+    {
+      subSensors_[i] = n_.subscribe(lstSources[i], 1, &PFLocalizationNode::callbackRobotPose, this);
     }
   }
 
@@ -141,7 +149,7 @@ bool PFLocalizationNode::waitForTransform(mrpt::poses::CPose3D &des, const std::
   tf::StampedTransform transform;
   try
   {
-    listenerTF_.waitForTransform(target_frame, source_frame, time, polling_sleep_duration);
+    listenerTF_.waitForTransform(target_frame, source_frame, time, timeout, polling_sleep_duration);
     listenerTF_.lookupTransform(target_frame, source_frame, time, transform);
   }
   catch (tf::TransformException& e)
@@ -226,12 +234,71 @@ void PFLocalizationNode::callbackBeacon(const mrpt_msgs::ObservationRangeBeacon 
   }
 }
 
+void PFLocalizationNode::callbackRobotPose(const geometry_msgs::PoseWithCovarianceStamped &_msg)
+{
+#if MRPT_VERSION>=0x150
+  using namespace mrpt::maps;
+  using namespace mrpt::obs;
+
+  std::string base_frame_id = tf::resolve(param()->tf_prefix, param()->base_frame_id);
+  std::string global_frame_id = tf::resolve(param()->tf_prefix, param()->global_frame_id);
+
+  tf::StampedTransform map_to_obs_tf;
+  try
+  {
+    listenerTF_.waitForTransform(global_frame_id, _msg.header.frame_id, ros::Time(0.0), ros::Duration(10.0));
+    listenerTF_.lookupTransform(global_frame_id, _msg.header.frame_id, ros::Time(0.0), map_to_obs_tf);
+  }
+  catch (tf::TransformException& ex)
+  {
+    ROS_ERROR("%s", ex.what());
+    return;
+  }
+
+  // Transform observation into global frame, including covariance. For that, we must first obtain
+  // the global frame -> observation frame tf as a Pose msg, as required by pose_cov_ops::compose
+  geometry_msgs::Pose map_to_obs_pose;
+  tf::pointTFToMsg(map_to_obs_tf.getOrigin(), map_to_obs_pose.position);
+  tf::quaternionTFToMsg(map_to_obs_tf.getRotation(), map_to_obs_pose.orientation);
+  geometry_msgs::PoseWithCovarianceStamped obs_pose_world;
+  obs_pose_world.header.stamp = _msg.header.stamp;
+  obs_pose_world.header.frame_id = global_frame_id;
+  pose_cov_ops::compose(map_to_obs_pose, _msg.pose, obs_pose_world.pose);
+
+  // Ensure the covariance matrix can be inverted (no zeros in the diagonal)
+  for (int i = 0; i < obs_pose_world.pose.covariance.size(); ++i)
+  {
+    if (i/6 == i%6 && obs_pose_world.pose.covariance[i] <= 0.0)
+   	  obs_pose_world.pose.covariance[i] = 1.0;
+  }
+
+  // Covert the received pose into an observation the filter can integrate
+  CObservationRobotPosePtr feature = CObservationRobotPose::Create();
+
+  feature->sensorLabel = _msg.header.frame_id;
+  mrpt_bridge::convert(_msg.header.stamp, feature->timestamp);
+  mrpt_bridge::convert(obs_pose_world.pose, feature->pose);
+
+  CSensoryFramePtr sf = CSensoryFrame::Create();
+  CObservationOdometryPtr odometry;
+  odometryForCallback(odometry, _msg.header);
+
+  CObservationPtr obs = CObservationPtr(feature);
+  sf->insert(obs);
+  observation(sf, odometry);
+  if (param()->gui_mrpt)
+    show3DDebug(sf);
+#else
+  // not implemented
+#endif
+}
+
 void PFLocalizationNode::odometryForCallback(CObservationOdometryPtr &_odometry, const std_msgs::Header &_msg_header)
 {
   std::string base_frame_id = tf::resolve(param()->tf_prefix, param()->base_frame_id);
   std::string odom_frame_id = tf::resolve(param()->tf_prefix, param()->odom_frame_id);
   mrpt::poses::CPose3D poseOdom;
-  if (this->waitForTransform(poseOdom, odom_frame_id, base_frame_id, _msg_header.stamp, ros::Duration(1)))
+  if (this->waitForTransform(poseOdom, odom_frame_id, base_frame_id, _msg_header.stamp, ros::Duration(1.0)))
   {
     _odometry = CObservationOdometry::Create();
     _odometry->sensorLabel = odom_frame_id;
@@ -300,7 +367,6 @@ void PFLocalizationNode::updateSensorPose(std::string _frame_id)
 
 void PFLocalizationNode::callbackInitialpose(const geometry_msgs::PoseWithCovarianceStamped& _msg)
 {
-  log_info("callbackInitialpose");
   const geometry_msgs::PoseWithCovariance &pose = _msg.pose;
   mrpt_bridge::convert(pose, initialPose_);
   update_filter_ = true;
@@ -366,24 +432,25 @@ void PFLocalizationNode::publishParticles()
 
 void PFLocalizationNode::publishTF()
 {
-  // Most of this code was copy and pase from ros::amcl
-  // sorry it is realy ugly
-  mrpt::poses::CPose2D robotPose;
-  pdf_.getMean(robotPose);
+  // Most of this code was copy and paste from ros::amcl
+  // sorry it is really ugly
+  mrpt::poses::CPose2D robot_pose;
+  pdf_.getMean(robot_pose);
   std::string base_frame_id = tf::resolve(param()->tf_prefix, param()->base_frame_id);
-  std::string global_frame_id = tf::resolve(param()->tf_prefix, param()->global_frame_id);
   std::string odom_frame_id = tf::resolve(param()->tf_prefix, param()->odom_frame_id);
+  std::string global_frame_id = tf::resolve(param()->tf_prefix, param()->global_frame_id);
   tf::Stamped<tf::Pose> odom_to_map;
-  tf::Transform tmp_tf;
-  ros::Time stamp = ros::Time::now();
+  tf::Transform robot_tf;
+  mrpt_bridge::convert(robot_pose, robot_tf);
+  ros::Time stamp(0.0);
   if (update_filter_)
     mrpt_bridge::convert(timeLastUpdate_, stamp);
-  mrpt_bridge::convert(robotPose, tmp_tf);
 
   try
   {
-    tf::Stamped<tf::Pose> tmp_tf_stamped(tmp_tf.inverse(), stamp, base_frame_id);
+    tf::Stamped<tf::Pose> tmp_tf_stamped(robot_tf.inverse(), stamp, base_frame_id);
     //ROS_INFO("subtract global_frame (%s) from odom_frame (%s)", global_frame_id.c_str(), odom_frame_id.c_str());
+
     listenerTF_.transformPose(odom_frame_id, tmp_tf_stamped, odom_to_map);
   }
   catch (tf::TransformException& e)
@@ -396,9 +463,8 @@ void PFLocalizationNode::publishTF()
   tf::Transform latest_tf_ = tf::Transform(tf::Quaternion(odom_to_map.getRotation()),
                                            tf::Point(odom_to_map.getOrigin()));
 
-  // We want to send a transform that is good up until a
-  // tolerance time so that odom can be used
-  ros::Time transform_expiration = (stamp + ros::Duration(param()->transform_tolerance));
+  // We want to send a transform that is good up until a tolerance time so that odom can be used
+  ros::Time transform_expiration = (update_filter_ ? stamp : ros::Time::now()) + ros::Duration(param()->transform_tolerance);
   tf::StampedTransform tmp_tf_stamped(latest_tf_.inverse(), transform_expiration, global_frame_id, odom_frame_id);
   tf_broadcaster_.sendTransform(tmp_tf_stamped);
   //ROS_INFO("%s, %s\n", global_frame_id.c_str(), odom_frame.c_str());
