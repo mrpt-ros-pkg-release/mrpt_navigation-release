@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <package>
   <name>mrpt_localization</name>
-  <version>0.1.15</version>
+  <version>0.1.16</version>
   <description>This package uses dynamic or static (MRPT or ROS) maps for 2D 
    self-localization. The interface is similar to amcl (http://wiki.ros.org/amcl) 
    but supports different particle-filter algorithms, several grid maps at 
@@ -26,9 +26,10 @@
   <build_depend>sensor_msgs</build_depend>
   <build_depend>nav_msgs</build_depend>
   <build_depend>mrpt_bridge</build_depend>
-  <build_depend>dynamic_reconfigure</build_depend> 
+  <build_depend>pose_cov_ops</build_depend>
+  <build_depend>dynamic_reconfigure</build_depend>
   <build_depend>mrpt</build_depend> <!-- Depend on mrpt system pkgs -->
-    
+
   <run_depend>roscpp</run_depend>
   <run_depend>rospy</run_depend>
   <run_depend>tf</run_depend>
@@ -36,7 +37,8 @@
   <run_depend>sensor_msgs</run_depend>
   <run_depend>nav_msgs</run_depend>
   <run_depend>mrpt_bridge</run_depend>
-  <run_depend>dynamic_reconfigure</run_depend> 
+  <run_depend>pose_cov_ops</run_depend>
+  <run_depend>dynamic_reconfigure</run_depend>
   <run_depend>mrpt</run_depend> <!-- Depend on mrpt system pkgs -->
-  
+
 </package>
