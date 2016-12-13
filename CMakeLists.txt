@@ -9,7 +9,8 @@ add_message_files(
   ObservationRangeBearing.msg
   ObservationRangeBeacon.msg
   SingleRangeBearingObservation.msg
-  SingleRangeBeaconObservation.msg)
+  SingleRangeBeaconObservation.msg
+  )
 
 generate_messages(DEPENDENCIES std_msgs geometry_msgs)
 
