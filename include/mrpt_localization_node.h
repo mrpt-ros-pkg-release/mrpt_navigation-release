@@ -85,6 +85,7 @@ public:
     std::string odom_frame_id;
     std::string global_frame_id;
     std::string base_frame_id;
+    bool update_while_stopped;
     bool pose_broadcast;
     bool tf_broadcast;
   };
@@ -95,6 +96,7 @@ public:
   void loop();
   void callbackLaser(const sensor_msgs::LaserScan&);
   void callbackBeacon(const mrpt_msgs::ObservationRangeBeacon&);
+  void callbackRobotPose(const geometry_msgs::PoseWithCovarianceStamped&);
   void odometryForCallback(CObservationOdometryPtr&, const std_msgs::Header&);
   void callbackInitialpose(const geometry_msgs::PoseWithCovarianceStamped&);
   void callbackOdometry(const nav_msgs::Odometry&);
