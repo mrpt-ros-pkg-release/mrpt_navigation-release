@@ -37,7 +37,7 @@ PFLocalizationNode::Parameters::Parameters(PFLocalizationNode *p) :
   node.param<double>("rate", rate, MRPT_LOCALIZATION_NODE_DEFAULT_RATE);
   ROS_INFO("rate: %f", rate);
   node.getParam("gui_mrpt", gui_mrpt);
-  ROS_INFO("gui_mrpt:  %s", (gui_mrpt ? "true" : "false"));
+  ROS_INFO("gui_mrpt: %s", gui_mrpt ? "true" : "false");
   node.param<int>("parameter_update_skip", parameter_update_skip, MRPT_LOCALIZATION_NODE_DEFAULT_PARAMETER_UPDATE_SKIP);
   ROS_INFO("parameter_update_skip: %i", parameter_update_skip);
   node.getParam("ini_file", iniFile);
@@ -55,9 +55,9 @@ PFLocalizationNode::Parameters::Parameters(PFLocalizationNode *p) :
   node.param<std::string>("base_frame_id", base_frame_id, "base_link");
   ROS_INFO("base_frame_id: %s", base_frame_id.c_str());
   node.param<bool>("pose_broadcast", pose_broadcast, false);
-  ROS_INFO("pose_broadcast:  %s", (pose_broadcast ? "true" : "false"));
+  ROS_INFO("pose_broadcast: %s", pose_broadcast ? "true" : "false");
   node.param<bool>("tf_broadcast", tf_broadcast, true);
-  ROS_INFO("tf_broadcast:  %s", (tf_broadcast ? "true" : "false"));
+  ROS_INFO("tf_broadcast: %s", tf_broadcast ? "true" : "false");
 
   reconfigureFnc_ = boost::bind(&PFLocalizationNode::Parameters::callbackParameters, this, _1, _2);
   reconfigureServer_.setCallback(reconfigureFnc_);
@@ -69,7 +69,7 @@ void PFLocalizationNode::Parameters::update(const unsigned long &loop_count)
     return;
   node.getParam("debug", debug);
   if (loop_count == 0)
-    ROS_INFO("debug:  %s", (debug ? "true" : "false"));
+    ROS_INFO("debug: %s", debug ? "true" : "false");
   {
     int v = particlecloud_update_skip;
     node.param<int>("particlecloud_update_skip", particlecloud_update_skip,
@@ -99,22 +99,24 @@ void PFLocalizationNode::Parameters::callbackParameters(mrpt_localization::Motio
     motion_model_options->gausianModel.a4 = config.gaussian_alpha_4;
     motion_model_options->gausianModel.minStdXY = config.gaussian_alpha_xy;
     motion_model_options->gausianModel.minStdPHI = config.gaussian_alpha_phi;
-    ROS_INFO("gausianModel.type: gaussian");
-    ROS_INFO("gausianModel.a1: %f", motion_model_options->gausianModel.a1);
-    ROS_INFO("gausianModel.a2: %f", motion_model_options->gausianModel.a2);
-    ROS_INFO("gausianModel.a3: %f", motion_model_options->gausianModel.a3);
-    ROS_INFO("gausianModel.a4: %f", motion_model_options->gausianModel.a4);
-    ROS_INFO("gausianModel.minStdXY: %f", motion_model_options->gausianModel.minStdXY);
-    ROS_INFO("gausianModel.minStdPHI: %f", motion_model_options->gausianModel.minStdPHI);
+	ROS_INFO("gaussianModel.type: gaussian");
+	ROS_INFO("gaussianModel.a1: %f", motion_model_options->gausianModel.a1);
+	ROS_INFO("gaussianModel.a2: %f", motion_model_options->gausianModel.a2);
+	ROS_INFO("gaussianModel.a3: %f", motion_model_options->gausianModel.a3);
+	ROS_INFO("gaussianModel.a4: %f", motion_model_options->gausianModel.a4);
+	ROS_INFO("gaussianModel.minStdXY: %f", motion_model_options->gausianModel.minStdXY);
+	ROS_INFO("gaussianModel.minStdPHI: %f", motion_model_options->gausianModel.minStdPHI);
   }
   else
   {
     ROS_INFO("We support at the moment only gaussian motion models");
   }
   *use_motion_model_default_options = config.use_default_motion;
-  ROS_INFO("use_motion_model_default_options:  %s", (use_motion_model_default_options ? "true" : "false"));
+  ROS_INFO("use_motion_model_default_options: %s", use_motion_model_default_options ? "true" : "false");
   motion_model_default_options->gausianModel.minStdXY = config.default_noise_xy;
   ROS_INFO("default_noise_xy: %f", motion_model_default_options->gausianModel.minStdXY);
   motion_model_default_options->gausianModel.minStdPHI = config.default_noise_phi;
   ROS_INFO("default_noise_phi: %f", motion_model_default_options->gausianModel.minStdPHI);
+  update_while_stopped = config.update_while_stopped;
+  ROS_INFO("update_while_stopped: %s", update_while_stopped ? "true" : "false");
 }
