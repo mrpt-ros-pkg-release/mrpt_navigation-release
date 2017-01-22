@@ -110,7 +110,7 @@ private:
 
 	struct MyReactiveInterface :
 #if MRPT_VERSION>=0x150
-			public mrpt::nav::CRobot2NavInterface_DiffDriven
+			public mrpt::nav::CRobot2NavInterface
 #else
 			public CReactiveInterfaceImplementation
 #endif
@@ -176,6 +176,7 @@ private:
 			using namespace mrpt::kinematics;
 			const CVehicleVelCmd_DiffDriven* vel_cmd_diff_driven =
 				dynamic_cast<const CVehicleVelCmd_DiffDriven*>(&vel_cmd);
+			ASSERT_(vel_cmd_diff_driven);
 
 			const double v = vel_cmd_diff_driven->lin_vel;
 			const double w = vel_cmd_diff_driven->ang_vel;
@@ -192,7 +193,7 @@ private:
 		}
 
 #if MRPT_VERSION>=0x150
-		bool stop()
+		bool stop(bool isEmergency)
 		{
 			mrpt::kinematics::CVehicleVelCmd_DiffDriven vel_cmd;
 			vel_cmd.lin_vel = 0;
@@ -233,6 +234,19 @@ private:
 			MRPT_TODO("TODO: Check age of obstacles!");
 			return true;
 		}
+
+#if MRPT_VERSION>=0x150
+		mrpt::kinematics::CVehicleVelCmdPtr getEmergencyStopCmd() override
+		{
+			return getStopCmd();
+		}
+		mrpt::kinematics::CVehicleVelCmdPtr getStopCmd() override
+		{
+			mrpt::kinematics::CVehicleVelCmdPtr ret = mrpt::kinematics::CVehicleVelCmdPtr(new mrpt::kinematics::CVehicleVelCmd_DiffDriven);
+			ret->setToStop();
+			return ret;
+		}
+#endif
 
 		virtual void sendNavigationStartEvent ()
 		{
