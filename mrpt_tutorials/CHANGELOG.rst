@@ -2,6 +2,21 @@
 Changelog for package mrpt_tutorials
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+0.1.20 (2018-04-26)
+-------------------
+* Merge branch 'master' into master
+* Merge branch 'master' into compat-mrpt-1.5
+* Adapted CMakeLists to new mrpt
+* Contributors: Borys Tymchenko, Jose Luis Blanco-Claraco
+
+0.1.21 (2018-04-27)
+-------------------
+* Upgrade version 0.1.20 (`#99 <https://github.com/mrpt-ros-pkg/mrpt_navigation/issues/99>`_)
+* Merge branch 'master' into master
+* Merge branch 'master' into compat-mrpt-1.5
+* Adapted CMakeLists to new mrpt
+* Contributors: Borys Tymchenko, Hunter Laux, Jose Luis Blanco-Claraco
+
 0.1.18 (2017-01-22)
 -------------------
 
