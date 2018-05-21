@@ -1,0 +1,12 @@
+Source: ros-melodic-mrpt-bridge
+Section: misc
+Priority: extra
+Maintainer: Jose-Luis Blanco-Claraco <jlblanco@ual.es>
+Build-Depends: debhelper (>= 9.0.0), libgtest-dev, libmrpt-dev, libpcl-dev, ros-melodic-catkin, ros-melodic-cv-bridge, ros-melodic-geometry-msgs, ros-melodic-marker-msgs, ros-melodic-message-generation, ros-melodic-mrpt-msgs, ros-melodic-nav-msgs, ros-melodic-pcl-conversions, ros-melodic-roscpp, ros-melodic-rosunit, ros-melodic-sensor-msgs, ros-melodic-std-msgs, ros-melodic-stereo-msgs, ros-melodic-tf
+Homepage: http://wiki.ros.org/mrpt_bridge
+Standards-Version: 3.9.2
+
+Package: ros-melodic-mrpt-bridge
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, libmrpt-dev, ros-melodic-geometry-msgs, ros-melodic-marker-msgs, ros-melodic-message-runtime, ros-melodic-mrpt-msgs, ros-melodic-nav-msgs, ros-melodic-roscpp, ros-melodic-sensor-msgs, ros-melodic-std-msgs, ros-melodic-stereo-msgs, ros-melodic-tf
+Description: C++ libraries to convert between ROS and MRPT classes and messages
