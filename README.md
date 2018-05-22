@@ -1,3 +1,33 @@
+## mrpt_navigation (melodic) - 0.1.22-0
+
+The packages in the `mrpt_navigation` repository were released into the `melodic` distro by running `/usr/bin/bloom-release mrpt_navigation --rosdistro melodic --track melodic` on `Tue, 22 May 2018 03:05:24 -0000`
+
+These packages were released:
+- `mrpt_local_obstacles`
+- `mrpt_localization`
+- `mrpt_map`
+- `mrpt_navigation`
+- `mrpt_rawlog`
+- `mrpt_reactivenav2d`
+- `mrpt_tutorials`
+
+Version of package(s) in repository `mrpt_navigation`:
+
+- upstream repository: https://github.com/mrpt-ros-pkg/mrpt_navigation.git
+- release repository: unknown
+- rosdistro version: `null`
+- old version: `0.1.21-1`
+- new version: `0.1.22-0`
+
+Versions of tools used:
+
+- bloom version: `0.6.4`
+- catkin_pkg version: `0.4.1`
+- rosdep version: `0.12.2`
+- rosdistro version: `0.6.8`
+- vcstools version: `0.1.40`
+
+
 ## mrpt_navigation (melodic) - 0.1.21-1
 
 The packages in the `mrpt_navigation` repository were released into the `melodic` distro by running `/usr/bin/bloom-release mrpt_navigation --track melodic --ros-distro melodic` on `Mon, 21 May 2018 07:20:44 -0000`
