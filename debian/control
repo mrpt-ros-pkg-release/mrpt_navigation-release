@@ -1,0 +1,13 @@
+Source: ros-kinetic-mrpt-navigation
+Section: misc
+Priority: extra
+Maintainer: Jose-Luis Blanco-Claraco <jlblanco@ual.es>
+Build-Depends: debhelper (>= 9.0.0), ros-kinetic-catkin
+Homepage: http://wiki.ros.org/mrpt_navigation
+Standards-Version: 3.9.2
+
+Package: ros-kinetic-mrpt-navigation
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, ros-kinetic-mrpt-local-obstacles, ros-kinetic-mrpt-localization, ros-kinetic-mrpt-map, ros-kinetic-mrpt-rawlog, ros-kinetic-mrpt-reactivenav2d, ros-kinetic-mrpt-tutorials
+Description: Tools related to the Mobile Robot Programming Toolkit (MRPT).
+ Refer to http://wiki.ros.org/mrpt_navigation for further documentation.
