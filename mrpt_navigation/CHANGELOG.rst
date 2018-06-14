@@ -2,6 +2,21 @@
 Changelog for package mrpt_navigation
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+0.1.23 (2018-06-14)
+-------------------
+* mrpt_bridge is out of this metapackage
+
+0.1.22 (2018-05-22)
+-------------------
+* fix all catkin_lint errors
+* remove pkgs from metapkg list
+* Contributors: Jose Luis Blanco-Claraco
+
+0.1.21 (2018-04-27)
+-------------------
+* Upgrade version 0.1.20 (`#99 <https://github.com/mrpt-ros-pkg/mrpt_navigation/issues/99>`_)
+* Contributors: Hunter Laux
+
 0.1.18 (2017-01-22)
 -------------------
 

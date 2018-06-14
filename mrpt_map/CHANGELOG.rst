@@ -2,6 +2,50 @@
 Changelog for package mrpt_map
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+0.1.23 (2018-06-14)
+-------------------
+
+0.1.20 (2018-04-26)
+-------------------
+* fix build against mrpt 2.0
+* partial fix build w mrpt 2.0
+* optimized build (-O3)
+* fix use c++14
+* Merge branch 'master' of github.com:tuw-robotics/mrpt_navigation
+* Merge branch 'master' into master
+* CMake finds MRPT >=1.5 in ROS master branch
+* Merge branch 'master' into compat-mrpt-1.5
+* CMake finds MRPT >=1.9
+* avoid Eigen warnings with GCC-7
+* Removed unnecessry MRPT_VERSION checks
+* Fixes for clang format
+* Adapted CMakeLists to new mrpt
+* Contributors: Borys Tymchenko, Jose Luis Blanco Claraco, Jose Luis Blanco-Claraco, Markus Bader
+
+
+0.1.22 (2018-05-22)
+-------------------
+* fix all catkin_lint errors
+* Contributors: Jose Luis Blanco-Claraco
+
+0.1.21 (2018-04-27)
+-------------------
+* Upgrade version 0.1.20 (`#99 <https://github.com/mrpt-ros-pkg/mrpt_navigation/issues/99>`_)
+* fix build against mrpt 2.0
+* partial fix build w mrpt 2.0
+* optimized build (-O3)
+* fix use c++14
+* Merge branch 'master' of github.com:tuw-robotics/mrpt_navigation
+* Merge branch 'master' into master
+* CMake finds MRPT >=1.5 in ROS master branch
+* Merge branch 'master' into compat-mrpt-1.5
+* CMake finds MRPT >=1.9
+* avoid Eigen warnings with GCC-7
+* Removed unnecessry MRPT_VERSION checks
+* Fixes for clang format
+* Adapted CMakeLists to new mrpt
+* Contributors: Borys Tymchenko, Hunter Laux, Jose Luis Blanco Claraco, Jose Luis Blanco-Claraco, Markus Bader
+
 0.1.18 (2017-01-22)
 -------------------
 
