@@ -1,0 +1,13 @@
+Source: ros-kinetic-mrpt-rawlog
+Section: misc
+Priority: extra
+Maintainer: Markus Bader <markus.bader@tuwien.ac.at>
+Build-Depends: debhelper (>= 9.0.0), ros-kinetic-catkin, ros-kinetic-dynamic-reconfigure, ros-kinetic-marker-msgs, ros-kinetic-mrpt-bridge, ros-kinetic-mrpt-msgs, ros-kinetic-mrpt1, ros-kinetic-nav-msgs, ros-kinetic-rosbag, ros-kinetic-roscpp, ros-kinetic-sensor-msgs, ros-kinetic-std-msgs, ros-kinetic-tf
+Homepage: http://wiki.ros.org/mrpt_rawlog
+Standards-Version: 3.9.2
+
+Package: ros-kinetic-mrpt-rawlog
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, ros-kinetic-dynamic-reconfigure, ros-kinetic-marker-msgs, ros-kinetic-mrpt-bridge, ros-kinetic-mrpt-msgs, ros-kinetic-mrpt1, ros-kinetic-nav-msgs, ros-kinetic-rosbag, ros-kinetic-roscpp, ros-kinetic-sensor-msgs, ros-kinetic-std-msgs, ros-kinetic-tf
+Description: This package enables you to record a rawlog from a ROS drive robot.
+ At the moment the package is able to deal with odometry and 2d laser scans.
