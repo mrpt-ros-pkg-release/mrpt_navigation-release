@@ -1,0 +1,13 @@
+Source: ros-kinetic-mrpt-localization
+Section: misc
+Priority: extra
+Maintainer: Markus Bader <markus.bader@tuwien.ac.at>
+Build-Depends: debhelper (>= 9.0.0), ros-kinetic-catkin, ros-kinetic-dynamic-reconfigure, ros-kinetic-mrpt-bridge, ros-kinetic-mrpt-msgs, ros-kinetic-mrpt1, ros-kinetic-nav-msgs, ros-kinetic-pose-cov-ops, ros-kinetic-roscpp, ros-kinetic-sensor-msgs, ros-kinetic-std-msgs, ros-kinetic-tf
+Homepage: http://www.mrpt.org/
+Standards-Version: 3.9.2
+
+Package: ros-kinetic-mrpt-localization
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, ros-kinetic-dynamic-reconfigure, ros-kinetic-mrpt-bridge, ros-kinetic-mrpt-msgs, ros-kinetic-mrpt1, ros-kinetic-nav-msgs, ros-kinetic-pose-cov-ops, ros-kinetic-roscpp, ros-kinetic-sensor-msgs, ros-kinetic-std-msgs, ros-kinetic-tf
+Description: Package for robot 2D self-localization using dynamic or static (MRPT or ROS) maps.
+ The interface is similar to amcl (http://wiki.ros.org/amcl) but supports different particle-filter algorithms, several grid maps at different heights, range-only localization, etc.
