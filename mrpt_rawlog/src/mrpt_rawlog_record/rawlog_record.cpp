@@ -35,49 +35,44 @@
 
 #include <mrpt_rawlog_record/rawlog_record.h>
 #include <mrpt_rawlog_record/rawlog_record_defaults.h>
+#include <mrpt/system/string_utils.h>
+#include <mrpt/system/filesystem.h>
 
 RawlogRecord::~RawlogRecord()
 {
-	log_info("write data");
 	MRPT_TODO("RawlogRecord writes the rawlog only on exit (Ctrl-C)");
-	log_info("pRawLog    entries %i", pRawLog->size());
-	log_info("pRawLogASF entries %i", pRawLogASF->size());
-	if (pRawLog->size() > 0)
+
+	log_info("writing dataset to disk...");
+	log_info("pRawLog    entries %i", pRawLog.size());
+	log_info("pRawLogASF entries %i", pRawLogASF.size());
+	if (pRawLog.size() > 0)
 	{
-		std::string filename =
-			param_->raw_log_folder + "/" + param_->raw_log_name;
+		const std::string filename =
+		    base_param_.raw_log_folder + "/" + base_param_.raw_log_name;
 		log_info("write %s", filename.c_str());
-		pRawLog->saveToRawLogFile(filename);
+		if (!pRawLog.saveToRawLogFile(filename))
+		{
+			log_error("Error writing to %s", filename.c_str());
+		}
 	}
-	if (pRawLogASF->size() > 0)
+	if (pRawLogASF.size() > 0)
 	{
-		std::string filename =
-			param_->raw_log_folder + "/" + param_->raw_log_name_asf;
+		const std::string filename =
+		    base_param_.raw_log_folder + "/" + base_param_.raw_log_name_asf;
 		log_info("write %s", filename.c_str());
-		pRawLogASF->saveToRawLogFile(filename);
+		if (!pRawLogASF.saveToRawLogFile(filename))
+		{
+			log_error("Error writing to %s", filename.c_str());
+		}
 	}
-	delete pRawLog;
-	delete pRawLogASF;
 }
 
-RawlogRecord::RawlogRecord(Parameters* param) : param_(param)
-{
-	pRawLog = new CRawlog;
-	pRawLogASF = new CRawlog;
-}
 void RawlogRecord::updateRawLogName(const mrpt::system::TTimeStamp& t)
 {
-	uint64_t tmp = (t - ((uint64_t)116444736 * 1000000000));
-	time_t auxTime = tmp / (uint64_t)10000000;
-	tm* ptm = localtime(&auxTime);
-	param_->raw_log_name = mrpt::format(
-		"%u-%02u-%02u--%02u-%02u-%02u--%s", 1900 + ptm->tm_year,
-		ptm->tm_mon + 1, ptm->tm_mday, ptm->tm_hour, ptm->tm_min,
-		(unsigned int)ptm->tm_sec, param_->raw_log_name.c_str());
-	param_->raw_log_name_asf = mrpt::format(
-		"%u-%02u-%02u--%02u-%02u-%02u--%s", 1900 + ptm->tm_year,
-		ptm->tm_mon + 1, ptm->tm_mday, ptm->tm_hour, ptm->tm_min,
-		(unsigned int)ptm->tm_sec, param_->raw_log_name_asf.c_str());
+	const auto prefix = mrpt::system::dateTimeLocalToString(t);
+
+	base_param_.raw_log_name = mrpt::system::fileNameStripInvalidChars(
+	    prefix + base_param_.raw_log_name);
+	base_param_.raw_log_name_asf = mrpt::system::fileNameStripInvalidChars(
+	    prefix + base_param_.raw_log_name_asf);
 }
-
-
