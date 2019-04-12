@@ -2,6 +2,15 @@
 Changelog for package mrpt_map
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+0.1.24 (2019-04-12)
+-------------------
+* fix build against mrpt-1.5
+* Fix build against MRPT 1.9.9
+* Contributors: Inounx, Jose Luis Blanco-Claraco, Julian Lopez Velasquez
+
+0.1.23 (2018-06-14)
+-------------------
+
 0.1.20 (2018-04-26)
 -------------------
 * fix build against mrpt 2.0
@@ -18,6 +27,7 @@ Changelog for package mrpt_map
 * Fixes for clang format
 * Adapted CMakeLists to new mrpt
 * Contributors: Borys Tymchenko, Jose Luis Blanco Claraco, Jose Luis Blanco-Claraco, Markus Bader
+
 
 0.1.22 (2018-05-22)
 -------------------
@@ -122,4 +132,3 @@ Changelog for package mrpt_map
 * rawlog player
 * map publisher added but not yet working
 * Contributors: Jose Luis Blanco, Jose-Luis Blanco-Claraco, Markus Bader
-
