@@ -2,6 +2,14 @@
 Changelog for package mrpt_reactivenav2d
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+0.1.24 (2019-04-12)
+-------------------
+* Fix build against MRPT 1.9.9
+* Contributors: Julian Lopez Velasquez
+
+0.1.23 (2018-06-14)
+-------------------
+
 0.1.20 (2018-04-26)
 -------------------
 * fix build against mrpt 2.0
@@ -26,6 +34,7 @@ Changelog for package mrpt_reactivenav2d
 * Update launch file to work with MRPT 1.5.0
 * fix build with MRPT 1.5.0
 * Contributors: Borys Tymchenko, Jose Luis Blanco, Jose Luis Blanco Claraco, Jose Luis Blanco-Claraco, Markus Bader, corot
+
 
 0.1.22 (2018-05-22)
 -------------------
