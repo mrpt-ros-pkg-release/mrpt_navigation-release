@@ -2,6 +2,14 @@
 Changelog for package mrpt_local_obstacles
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+0.1.24 (2019-04-12)
+-------------------
+* Fix build against MRPT 1.9.9
+* Contributors: Julian Lopez Velasquez
+
+0.1.23 (2018-06-14)
+-------------------
+
 0.1.22 (2018-05-22)
 -------------------
 * fix all catkin_lint errors
