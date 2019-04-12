@@ -1,0 +1,13 @@
+Source: ros-melodic-mrpt-localization
+Section: misc
+Priority: extra
+Maintainer: Markus Bader <markus.bader@tuwien.ac.at>
+Build-Depends: debhelper (>= 9.0.0), ros-melodic-catkin, ros-melodic-dynamic-reconfigure, ros-melodic-mrpt-bridge, ros-melodic-mrpt-msgs, ros-melodic-mrpt1, ros-melodic-nav-msgs, ros-melodic-pose-cov-ops, ros-melodic-roscpp, ros-melodic-sensor-msgs, ros-melodic-std-msgs, ros-melodic-tf
+Homepage: http://www.mrpt.org/
+Standards-Version: 3.9.2
+
+Package: ros-melodic-mrpt-localization
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, ros-melodic-dynamic-reconfigure, ros-melodic-mrpt-bridge, ros-melodic-mrpt-msgs, ros-melodic-mrpt1, ros-melodic-nav-msgs, ros-melodic-pose-cov-ops, ros-melodic-roscpp, ros-melodic-sensor-msgs, ros-melodic-std-msgs, ros-melodic-tf
+Description: Package for robot 2D self-localization using dynamic or static (MRPT or ROS) maps.
+ The interface is similar to amcl (http://wiki.ros.org/amcl) but supports different particle-filter algorithms, several grid maps at different heights, range-only localization, etc.
