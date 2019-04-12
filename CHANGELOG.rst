@@ -2,6 +2,17 @@
 Changelog for package mrpt_rawlog
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+0.1.24 (2019-04-12)
+-------------------
+* Fix build against mrpt-1.5
+* Fix build against MRPT 1.9.9
+* fix regression introduced in last refactor of mrpt_rawlog
+* rawlog_record: Explain error if cannot write .rawlog
+* Contributors: Jose Luis Blanco Claraco, Julian Lopez Velasquez
+
+0.1.23 (2018-06-14)
+-------------------
+
 0.1.20 (2018-04-26)
 -------------------
 * rawlog_play: clean up; support obs-only rawlog
@@ -34,6 +45,7 @@ Changelog for package mrpt_rawlog
 * [mrpt_rawlog] Fix missing rosbag dependency in package.xml. (`#66 <https://github.com/mrpt-ros-pkg/mrpt_navigation/issues/66>`_)
 * [mrpt_rawlog] Fix missing rosbag dependency in package.xml.
 * Contributors: Borys Tymchenko, Jose Luis Blanco Claraco, Jose Luis Blanco-Claraco, Logrus, Markus Bader, Vladislav Tananaev
+
 
 0.1.22 (2018-05-22)
 -------------------
@@ -167,4 +179,3 @@ Changelog for package mrpt_rawlog
 * Removed obsolete rawlog_play & fix build of other nodes.
 * Update all wiki URLs
 * Fix build with mrpt 1.2.x
-
