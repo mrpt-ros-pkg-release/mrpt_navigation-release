@@ -2,6 +2,14 @@
 Changelog for package mrpt_localization
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+0.1.26 (2019-10-05)
+-------------------
+
+0.1.25 (2019-10-04)
+-------------------
+* fix build against mrpt2
+* Contributors: Jose Luis Blanco-Claraco
+
 0.1.24 (2019-04-12)
 -------------------
 * Fix build against MRPT 1.9.9
