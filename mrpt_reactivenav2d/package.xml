@@ -1,21 +1,21 @@
 <?xml version="1.0"?>
 <package format="2">
   <name>mrpt_reactivenav2d</name>
-  <version>0.1.26</version>
+  <version>1.0.0</version>
   <description>Reactive navigation for 2D robots using MRPT navigation algorithms (TP-Space)</description>
 
   <maintainer email="jlblanco@ual.es">Jose-Luis Blanco-Claraco</maintainer>
 
   <license>BSD</license>
 
-  <url type="website">http://wiki.ros.org/mrpt_reactivenav2d</url>
+  <url type="website">https://wiki.ros.org/mrpt_reactivenav2d</url>
 
   <author email="jlblanco@ual.es">Jose-Luis Blanco-Claraco</author>
 
 
   <buildtool_depend>catkin</buildtool_depend>
 
-  <depend>mrpt1</depend>
+  <depend>mrpt2</depend>
   <depend>actionlib</depend>
   <depend>actionlib_msgs</depend>
   <depend>dynamic_reconfigure</depend>

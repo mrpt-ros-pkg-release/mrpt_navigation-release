@@ -2,6 +2,11 @@
 Changelog for package mrpt_navigation
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+1.0.0 (2022-04-30)
+------------------
+* Update URLs to https
+* Contributors: Jose Luis Blanco Claraco
+
 0.1.26 (2019-10-05)
 -------------------
 

@@ -2,6 +2,13 @@
 Changelog for package mrpt_local_obstacles
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+1.0.0 (2022-04-30)
+------------------
+* Update URLs to https
+* Update build dep to mrpt2
+* Fix build against mrpt2
+* Contributors: Jose Luis Blanco Claraco, Jose Luis Blanco-Claraco, Jose-Luis Blanco
+
 0.1.26 (2019-10-05)
 -------------------
 
