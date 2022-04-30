@@ -1,0 +1,13 @@
+Source: ros-melodic-mrpt-navigation
+Section: misc
+Priority: optional
+Maintainer: Jose-Luis Blanco-Claraco <jlblanco@ual.es>
+Build-Depends: debhelper (>= 9.0.0), ros-melodic-catkin
+Homepage: https://wiki.ros.org/mrpt_navigation
+Standards-Version: 3.9.2
+
+Package: ros-melodic-mrpt-navigation
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, ros-melodic-mrpt-local-obstacles, ros-melodic-mrpt-localization, ros-melodic-mrpt-map, ros-melodic-mrpt-rawlog, ros-melodic-mrpt-reactivenav2d, ros-melodic-mrpt-tutorials
+Description: Tools related to the Mobile Robot Programming Toolkit (MRPT).
+ Refer to https://wiki.ros.org/mrpt_navigation for further documentation.
