@@ -1,3 +1,33 @@
+## mrpt_navigation (noetic) - 1.0.0-1
+
+The packages in the `mrpt_navigation` repository were released into the `noetic` distro by running `/usr/bin/bloom-release --ros-distro noetic mrpt_navigation` on `Sat, 30 Apr 2022 19:22:57 -0000`
+
+These packages were released:
+- `mrpt_local_obstacles`
+- `mrpt_localization`
+- `mrpt_map`
+- `mrpt_navigation`
+- `mrpt_rawlog`
+- `mrpt_reactivenav2d`
+- `mrpt_tutorials`
+
+Version of package(s) in repository `mrpt_navigation`:
+
+- upstream repository: https://github.com/mrpt-ros-pkg/mrpt_navigation.git
+- release repository: unknown
+- rosdistro version: `null`
+- old version: `null`
+- new version: `1.0.0-1`
+
+Versions of tools used:
+
+- bloom version: `0.11.1`
+- catkin_pkg version: `0.4.24`
+- rosdep version: `0.21.0`
+- rosdistro version: `0.8.3`
+- vcstools version: `0.1.42`
+
+
 ## mrpt_navigation (kinetic) - 0.1.26-1
 
 The packages in the `mrpt_navigation` repository were released into the `kinetic` distro by running `/usr/bin/bloom-release --rosdistro kinetic --track kinetic mrpt_navigation` on `Sat, 05 Oct 2019 22:51:18 -0000`
