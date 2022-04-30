@@ -1,0 +1,12 @@
+Source: ros-noetic-mrpt-tutorials
+Section: misc
+Priority: optional
+Maintainer: Markus Bader <markus.bader@tuwien.ac.at>
+Build-Depends: debhelper (>= 9.0.0), ros-noetic-catkin
+Homepage: 
+Standards-Version: 3.9.2
+
+Package: ros-noetic-mrpt-tutorials
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, ros-noetic-teleop-twist-keyboard, ros-noetic-tf
+Description: Example files used as tutorials for MRPT ROS packages
