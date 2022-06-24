@@ -2,6 +2,11 @@
 Changelog for package mrpt_tutorials
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+1.0.1 (2022-06-24)
+------------------
+* Removed now obsolete tf_prefix
+* Contributors: Jose Luis Blanco-Claraco
+
 1.0.0 (2022-04-30)
 ------------------
 
