@@ -1,8 +1,0 @@
-ros-melodic-mrpt-msgs-bridge (1.0.1-1bionic) bionic; urgency=high
-
-  * New package mrpt_msgs_bridge
-  * Contributors: Jose Luis Blanco-Claraco
-
- -- José Luis Blanco-Claraco <joseluisblancoc@gmail.com>  Thu, 23 Jun 2022 22:00:00 -0000
-
-
