@@ -1,0 +1,12 @@
+Source: ros-noetic-mrpt-msgs-bridge
+Section: misc
+Priority: optional
+Maintainer: José Luis Blanco-Claraco <joseluisblancoc@gmail.com>
+Build-Depends: debhelper (>= 9.0.0), ros-noetic-catkin, ros-noetic-geometry-msgs, ros-noetic-marker-msgs, ros-noetic-mrpt-msgs, ros-noetic-mrpt2, ros-noetic-ros-environment, ros-noetic-roscpp, ros-noetic-tf2
+Homepage: https://www.mrpt.org/
+Standards-Version: 3.9.2
+
+Package: ros-noetic-mrpt-msgs-bridge
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, ros-noetic-geometry-msgs, ros-noetic-marker-msgs, ros-noetic-mrpt-msgs, ros-noetic-mrpt2, ros-noetic-roscpp, ros-noetic-tf2
+Description: C++ library to convert between custom mrpt_msgs messages and native MRPT classes
