@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <package format="2">
   <name>mrpt_localization</name>
-  <version>1.0.0</version>
+  <version>1.0.3</version>
   <description>Package for robot 2D self-localization using dynamic or static (MRPT or ROS) maps.
 	The interface is similar to amcl (https://wiki.ros.org/amcl)
    but supports different particle-filter algorithms, several grid maps at
@@ -21,12 +21,14 @@
 
   <depend>mrpt2</depend>
   <depend>roscpp</depend>
-  <depend>tf</depend>
+  <depend>tf2</depend>
+  <depend>tf2_ros</depend>
+  <depend>tf2_geometry_msgs</depend>
   <depend>std_msgs</depend>
   <depend>sensor_msgs</depend>
   <depend>nav_msgs</depend>
   <depend>mrpt_msgs</depend>
-  <depend>mrpt_bridge</depend>
+  <depend>mrpt_msgs_bridge</depend>
   <depend>pose_cov_ops</depend>
   <depend>dynamic_reconfigure</depend>
 
