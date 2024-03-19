@@ -2,6 +2,11 @@
 Changelog for package mrpt_rawlog
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+1.0.5 (2024-03-19)
+------------------
+* fix mrpt2 API
+* Contributors: Jose Luis Blanco-Claraco
+
 1.0.4 (2023-03-28)
 ------------------
 
