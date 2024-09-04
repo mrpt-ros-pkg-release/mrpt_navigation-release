@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <package format="2">
   <name>mrpt_map</name>
-  <version>1.0.5</version>
+  <version>1.0.6</version>
   <description>The mrpt_map is able to publish a mrpt map as ros occupancy grid like the map_server</description>
 
   <maintainer email="markus.bader@tuwien.ac.at">Markus Bader</maintainer>
@@ -12,7 +12,9 @@
 
   <buildtool_depend>catkin</buildtool_depend>
 
-  <depend>mrpt2</depend>
+  <depend>mrpt_libmaps</depend>
+  <depend>mrpt_libros_bridge</depend>
+
 
   <depend>roscpp</depend>
   <depend>nav_msgs</depend>
