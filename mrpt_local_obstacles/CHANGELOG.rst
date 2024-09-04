@@ -2,6 +2,11 @@
 Changelog for package mrpt_local_obstacles
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+1.0.6 (2024-09-04)
+------------------
+* port to new mrpt_lib ROS packages as dependencies
+* Contributors: Jose Luis Blanco-Claraco
+
 1.0.5 (2024-03-19)
 ------------------
 * fix missing mola-common submodule
