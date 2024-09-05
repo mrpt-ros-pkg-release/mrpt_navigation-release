@@ -1,0 +1,12 @@
+Source: ros-noetic-mrpt-map
+Section: misc
+Priority: optional
+Maintainer: Markus Bader <markus.bader@tuwien.ac.at>
+Build-Depends: debhelper (>= 9.0.0), ros-noetic-catkin, ros-noetic-mrpt-libmaps, ros-noetic-mrpt-libros-bridge, ros-noetic-nav-msgs, ros-noetic-roscpp
+Homepage: https://wiki.ros.org/mrpt_map
+Standards-Version: 3.9.2
+
+Package: ros-noetic-mrpt-map
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, ros-noetic-mrpt-libmaps, ros-noetic-mrpt-libros-bridge, ros-noetic-nav-msgs, ros-noetic-roscpp
+Description: The mrpt_map is able to publish a mrpt map as ros occupancy grid like the map_server
