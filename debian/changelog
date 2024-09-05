@@ -1,0 +1,43 @@
+ros-noetic-mrpt-msgs-bridge (1.0.6-2focal) focal; urgency=high
+
+  * port to new mrpt_lib ROS packages as dependencies
+  * Contributors: Jose Luis Blanco-Claraco
+
+ -- José Luis Blanco-Claraco <joseluisblancoc@gmail.com>  Tue, 03 Sep 2024 22:00:00 -0000
+
+ros-noetic-mrpt-msgs-bridge (1.0.5-2focal) focal; urgency=high
+
+  * Merge branch 'newtip' into ros1
+  * dependency changes
+  * Contributors: Jose Luis Blanco-Claraco, SRai22
+
+ -- José Luis Blanco-Claraco <joseluisblancoc@gmail.com>  Mon, 18 Mar 2024 23:00:00 -0000
+
+ros-noetic-mrpt-msgs-bridge (1.0.4-2focal) focal; urgency=high
+
+
+
+ -- José Luis Blanco-Claraco <joseluisblancoc@gmail.com>  Mon, 27 Mar 2023 22:00:00 -0000
+
+ros-noetic-mrpt-msgs-bridge (1.0.3-2focal) focal; urgency=high
+
+  * Fix CMake script error due to last commit typo
+  * Contributors: Jose Luis Blanco Claraco
+
+ -- José Luis Blanco-Claraco <joseluisblancoc@gmail.com>  Fri, 24 Jun 2022 22:00:00 -0000
+
+ros-noetic-mrpt-msgs-bridge (1.0.2-2focal) focal; urgency=high
+
+  * Fix wrong destination for mrpt_msgs_bridge headers
+  * Contributors: Jose Luis Blanco Claraco
+
+ -- José Luis Blanco-Claraco <joseluisblancoc@gmail.com>  Fri, 24 Jun 2022 22:00:00 -0000
+
+ros-noetic-mrpt-msgs-bridge (1.0.1-2focal) focal; urgency=high
+
+  * New package mrpt_msgs_bridge
+  * Contributors: Jose Luis Blanco-Claraco
+
+ -- José Luis Blanco-Claraco <joseluisblancoc@gmail.com>  Thu, 23 Jun 2022 22:00:00 -0000
+
+
